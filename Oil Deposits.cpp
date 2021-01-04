@@ -58,11 +58,12 @@ int direction[8][2]={{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
 void collectoil(int i,int j){
 	pair<int,int> cur,next;
 	q.push(make_pair(i,j));
+	collected[i][j]=true;
 	
 	while(!q.empty()){
 		cur=q.front();
 		q.pop();
-		collected[cur.first][cur.second]=true;
+		
 		
 		for(int i=0;i<8;i++){
 			next.first = cur.first + direction[i][0];
