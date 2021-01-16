@@ -17,14 +17,13 @@ int main(int argc, char** argv) {
 			for(int j=0;j<m;j++){
 				if(i-val[j]>=0 && !dp[i-val[j]]){
 					dp[i]=1;
-					break;
+					//break;
 				}
 			}
 		}
 		
 		if(dp[n]) cout << "Stan wins" << endl;
 		else cout << "Ollie wins" << endl;
-		
 	}
 	return 0;
 }
